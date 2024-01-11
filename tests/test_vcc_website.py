@@ -24,15 +24,19 @@ from selenium import webdriver
 class TestVccPage:
     def test_run_chrome(self, chrome_browser: webdriver.Chrome):
         chrome_browser.get('https://www.volvocars.com/intl/v/safety/highlights')
+
+        chrome_browser.refresh()
         
-        time.sleep(15)
+        time.sleep(3)
 
         assert True
 
     def test_run_firefox(self, firefox_browser: webdriver.Firefox):
         firefox_browser.get('https://www.volvocars.com/intl/v/safety/highlights')
 
-        time.sleep(15)
+        firefox_browser.refresh()
+
+        time.sleep(3)
 
         assert True
 
